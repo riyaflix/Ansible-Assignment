@@ -2,7 +2,7 @@
 - name: Delete default nginx site
   become: yes
   file:
-    path: /etc/nginx/sites-enabled/default
+    path: /etc/nginx/sites-available/default
     state: absent
   notify: Restart Nginx
 
