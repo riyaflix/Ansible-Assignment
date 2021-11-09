@@ -1,0 +1,7 @@
+---
+- name: Update apt cache and Install Nginx
+  become: yes
+  apt:
+    name: nginx
+    state: latest
+    update_cache: yes

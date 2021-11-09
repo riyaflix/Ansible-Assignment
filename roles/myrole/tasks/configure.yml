@@ -1,0 +1,17 @@
+---
+- name: Delete default nginx site
+  become: yes
+  file:
+    path: /etc/nginx/sites-enabled/default
+    state: absent
+  notify: Restart Nginx
+
+
+- name: Copy website files to the server's document root
+  become: yes
+  copy:
+    src: index.html
+    dest: /var/www/html
+    owner: root
+    group: root
+    mode: 0644

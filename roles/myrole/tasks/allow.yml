@@ -1,0 +1,6 @@
+- name: Allow all access to tcp port 80
+  become: yes
+  ufw:
+    rule: allow
+    port: 80
+    proto: tcp

@@ -1,0 +1,7 @@
+---
+# tasks file for myrole
+
+- import_tasks: install.yml
+- import_tasks: configure.yml
+- import_tasks: template.yml
+- import_tasks: allow.yml
